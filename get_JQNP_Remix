@@ -1,0 +1,14 @@
+#!/bin/sh
+export DISCORD_TOKEN= 
+export DISCORD_CHANNEL=1075791895416012860
+DATA_FILE=~/jknep/data.js
+DATA_TMP=~/jknep/data.tmp
+#SCRIPT_DIR=$(dirname "$0")
+SCRIPT_DIR=/target/release/jqnpr_bot
+
+echo "let jqnps = " >$DATA_TMP
+$SCRIPT_DIR/jqnpr_bot >>$DATA_TMP
+echo ";" >>$DATA_TMP
+
+rm -f $DATA_FILE
+mv $DATA_TMP $DATA_FILE
