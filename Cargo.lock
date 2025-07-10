@@ -157,6 +157,7 @@ dependencies = [
 [[package]]
 name = "discord"
 version = "0.9.0"
+source = "git+https://github.com/Jiknep-Museum/discord-rs.git#f7b4c557b3d5b608ade9fb0ea9725efdb04abb55"
 dependencies = [
  "base64-rs",
  "bitflags 1.3.2",
@@ -338,7 +339,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4a5f13b858c8d314ee3e8f639011f7ccefe71f97f96e50151fb991f267928e2c"
 
 [[package]]
-name = "jqnpr_bot"
+name = "jiknep-bot"
 version = "0.1.0"
 dependencies = [
  "anyhow",

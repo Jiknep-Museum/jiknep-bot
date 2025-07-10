@@ -1,0 +1,12 @@
+#!/bin/sh
+#export DISCORD_TOKEN=a remplir 
+export DISCORD_CHANNEL=1075791895416012860
+DATA_FILE=../jiknep-museum.github.io/jiknepr.json
+DATA_TMP=../jiknep-museum.github.io/data.tmp
+SCRIPT_DIR=$(dirname "$0")
+BOT_EXE=$SCRIPT_DIR/target/release/jqnpr_bot
+
+$BOT_EXE >$DATA_TMP
+
+rm -f $DATA_FILE
+mv $DATA_TMP $DATA_FILE
